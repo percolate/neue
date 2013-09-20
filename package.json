@@ -1,0 +1,26 @@
+{
+  "name": "neue",
+  "version": "0.0.0",
+  "description": "A minimal web font loader for JavaScript",
+  "main": "./lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-server": "./node_modules/.bin/node-dev ./test/server"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "own": "0.0.2",
+    "async": "~0.2.9"
+  },
+  "devDependencies": {
+    "express": "~3.4.0",
+    "node-dev": "~2.0.2",
+    "browserify-middleware": "~1.17.2"
+  }
+}
