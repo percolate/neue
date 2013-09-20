@@ -1,6 +1,6 @@
 {
   "name": "neue",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A minimal web font loader for JavaScript",
   "main": "./lib/index.js",
   "directories": {
