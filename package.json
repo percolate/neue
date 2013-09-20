@@ -9,8 +9,12 @@
     "test-server": "./node_modules/.bin/node-dev ./test/server"
   },
   "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/percolate/neue"
+  },
   "dependencies": {
-    "own": "0.0.2",
+    "own": "~0.0.2",
     "async": "~0.2.9"
   },
   "devDependencies": {
