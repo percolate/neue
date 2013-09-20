@@ -7,13 +7,8 @@ Load linked fonts via `@font-face`.
 ## Installation
 
 ```
-$ npm install neue
+$ npm install git+ssh://git@github.com:percolate/neue.git
 ```
-
-or:
-
-- [neue.js]()
-- [neue.min.js]()
 
 ## Usage
 
@@ -38,12 +33,8 @@ Where `grand-hotel.css` is like:
 
 ## Tests
 
-To run the test server at [http://127.0.0.1](http://127.0.0.1):
+To run the test server at [http://127.0.0.1:3000](http://127.0.0.1:3000):
 
 ```
 $ npm run-script test-server
 ```
-
-## License
-
-MIT License, see [LICENSE]() for details.
