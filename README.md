@@ -2,7 +2,7 @@
 
 ## A minimal web font loader for JavaScript
 
-Composable, async loading of linked fonts via `@font-face`.
+Load linked fonts via `@font-face`.
 
 ## Installation
 
