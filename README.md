@@ -1,14 +1,21 @@
 # neue
 
-## A minimal web font loader for JavaScript
+## A minimal web font loader
 
 Load linked fonts via `@font-face`.
 
 ## Installation
 
+Install with npm:
+
 ```
 $ npm install git+ssh://git@github.com:percolate/neue.git
 ```
+
+## Downloads
+
+- [neue.js](dist/neue.js)
+- [neue.min.js](dist/neue.min.js)
 
 ## Usage
 
@@ -37,4 +44,12 @@ To run the test server at [http://127.0.0.1:3000](http://127.0.0.1:3000):
 
 ```
 $ npm run-script test-server
+```
+
+## Builds
+
+Create standalone builds with Grunt:
+
+```
+$ grunt build
 ```

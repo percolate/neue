@@ -2,7 +2,7 @@
   "private": true,
   "name": "neue",
   "version": "0.0.1",
-  "description": "A minimal web font loader for JavaScript",
+  "description": "A minimal web font loader",
   "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,6 +20,9 @@
   "devDependencies": {
     "express": "~3.4.0",
     "node-dev": "~2.0.2",
-    "browserify-middleware": "~1.17.2"
+    "browserify-middleware": "~1.17.2",
+    "grunt-browserify": "~1.2.4",
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.4"
   }
 }
