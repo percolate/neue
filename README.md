@@ -40,7 +40,7 @@ Where `grand-hotel.css` is like:
 
 ## Tests
 
-To run the test server at [http://127.0.0.1:3000](http://127.0.0.1:3000):
+Run the test server at [http://127.0.0.1:3000](http://127.0.0.1:3000):
 
 ```
 $ npm run-script test-server
@@ -48,8 +48,8 @@ $ npm run-script test-server
 
 ## Builds
 
-Create standalone builds with Grunt:
+Create standalone builds with [Grunt](http://gruntjs.com/):
 
 ```
-$ grunt build
+$ grunt dist
 ```
