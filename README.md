@@ -38,12 +38,12 @@ Where `grand-hotel.css` is like:
 }
 ```
 
-## Tests
+## Examples
 
-Run the test server at [http://127.0.0.1:3000](http://127.0.0.1:3000):
+Run the example server at [http://127.0.0.1:3000](http://127.0.0.1:3000):
 
 ```
-$ npm run-script test-server
+$ npm run-script example-server
 ```
 
 ## Builds

@@ -6,7 +6,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test-server": "./node_modules/.bin/node-dev ./test/server"
+    "example-server": "./node_modules/.bin/node-dev ./example/server"
   },
   "readmeFilename": "README.md",
   "repository": {
