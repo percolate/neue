@@ -19,22 +19,54 @@ $ npm install git+ssh://git@github.com:percolate/neue.git
 
 ## Usage
 
+Define font families in [FVD](https://github.com/typekit/fvd) style:
+
 ```js
 neue.load([
-    { families: ['Grand Hotel'], css: 'grand-hotel.css' }
+    { families: ['Source Sans Pro:n2,n3,n4,n6,n7,n9'], css: '//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' }
 ], function(err){
     // fonts are ready!
 })
 ```
 
-Where `grand-hotel.css` is like:
+Where the loaded CSS is like:
 
 ```css
 @font-face {
-    font-family: 'Grand Hotel';
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 200;
+    src: ...
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: ...
+}
+@font-face {
+    font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 400;
-    src: local('Grand Hotel'), url('grand-hotel.ttf') format('truetype');
+    src: ...
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: ...
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: ...
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 900;
+    src: ...
 }
 ```
 
