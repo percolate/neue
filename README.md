@@ -70,6 +70,20 @@ Where the loaded CSS is like:
 }
 ```
 
+## Utilities
+
+### `parse`
+
+```js
+neue.parse('Source Sans Pro') // { family: 'Source Sans Pro', variations: ['n4'] }
+```
+
+### `stringify`
+
+```js
+neue.stringify('Source Sans Pro') // ['source-sans-pro-n4']
+```
+
 ## Examples
 
 Run the example server at [http://127.0.0.1:3000](http://127.0.0.1:3000):

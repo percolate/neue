@@ -14,7 +14,7 @@
     "url": "https://github.com/percolate/neue"
   },
   "dependencies": {
-    "own": "~0.0.2",
+    "own": "0.0.5",
     "async": "~0.2.9",
     "fvd": "git+ssh://git@github.com:percolate/fvd.git"
   },
