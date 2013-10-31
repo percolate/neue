@@ -1,5 +1,5 @@
 /*
-    neue - v0.1.0
+    neue - v0.1.1
     (c) 2013 Percolate Industries, Inc. http://percolate.com
 */
 !function(e) {
