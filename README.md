@@ -2,7 +2,7 @@
 
 ## A minimal web font loader
 
-Load linked fonts via `@font-face`.
+Load linked fonts with `@font-face`.
 
 ## Installation
 
@@ -19,7 +19,8 @@ $ npm install git+ssh://git@github.com:percolate/neue.git
 
 ## Usage
 
-Define font families in [FVD](https://github.com/typekit/fvd) style:
+Load font families using [FVD-style](https://github.com/percolate/fvd) declarations:
+
 
 ```js
 neue.load([
@@ -29,7 +30,7 @@ neue.load([
 })
 ```
 
-Where the loaded CSS is like:
+Where the CSS file looks something like this:
 
 ```css
 @font-face {
@@ -75,16 +76,16 @@ Where the loaded CSS is like:
 ### `parse`
 
 ```js
-neue.parse('Source Sans Pro') // { family: 'Source Sans Pro', variations: ['n4'] }
+neue.parse('Source Sans Pro:n2') // { family: 'Source Sans Pro', variations: ['n2'] }
 ```
 
 ### `stringify`
 
 ```js
-neue.stringify('Source Sans Pro') // ['source-sans-pro-n4']
+neue.stringify('Source Sans Pro:n2') // ['source-sans-pro-n2']
 ```
 
-## Examples
+## Example
 
 Run the example server at [http://127.0.0.1:3000](http://127.0.0.1:3000):
 
@@ -92,9 +93,17 @@ Run the example server at [http://127.0.0.1:3000](http://127.0.0.1:3000):
 $ npm run-script example-server
 ```
 
+## Tests
+
+Open `./test/runner/index.html` in the browser or run in PhantomJS using:
+
+```
+$ grunt test
+```
+
 ## Builds
 
-Create standalone builds with [Grunt](http://gruntjs.com/):
+Create standalone `dist/neue.js` and `dist/neue.min.js` builds:
 
 ```
 $ grunt dist
