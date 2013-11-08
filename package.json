@@ -5,7 +5,7 @@
   "description": "A minimal web font loader",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha",
+    "test": "grunt test",
     "example-server": "./node_modules/.bin/node-dev ./example/server"
   },
   "readmeFilename": "README.md",
