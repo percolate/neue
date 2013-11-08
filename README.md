@@ -1,4 +1,4 @@
-# neue
+# neue [![Build Status](https://circleci.com/gh/percolate/neue.png?circle-token=:circle-token)](https://circleci.com/gh/percolate/neue.png?circle-token=:circle-token)
 
 ## A minimal web font loader
 
