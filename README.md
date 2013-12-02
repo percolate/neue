@@ -90,7 +90,7 @@ neue.stringify('Source Sans Pro:n2') // ['source-sans-pro-n2']
 Run the example server at [http://127.0.0.1:3000](http://127.0.0.1:3000):
 
 ```
-$ npm run-script example-server
+$ npm run example-server
 ```
 
 ## Tests
