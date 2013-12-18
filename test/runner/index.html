@@ -2,13 +2,13 @@
 <html>
     <head>
         <title>predator.js</title>
-        <link rel="stylesheet" href="../../node_modules/mocha/mocha.css" />
+        <link rel="stylesheet" href="/mocha.css" />
     </head>
     <body>
         <div id="mocha"></div>
-        <script src="../../node_modules/mocha/mocha.js"></script>
+        <script src="/mocha.js"></script>
         <script>mocha.setup('bdd')</script>
-        <script src="./index.js"></script>
+        <script src="/index.js"></script>
         <script>
             if (navigator.userAgent.indexOf('PhantomJS') < 0) {
                 mocha.run();
