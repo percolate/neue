@@ -1,8 +1,12 @@
+var path = require('path')
+
 var BANNER = '/*\n    <%= pkg.name %> - v<%= pkg.version %>\n    (c) 2013 Percolate Industries, Inc. http://percolate.com\n*/\n'
 
 module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-browserify')
+    grunt.loadNpmTasks('grunt-contrib-connect')
+    grunt.loadNpmTasks('grunt-contrib-copy')
     grunt.loadNpmTasks('grunt-contrib-jshint')
     grunt.loadNpmTasks('grunt-contrib-uglify')
     grunt.loadNpmTasks('grunt-mocha')
@@ -23,6 +27,27 @@ module.exports = function (grunt) {
                 },
                 src: './test/index.js',
                 dest: './test/runner/index.js'
+            }
+        },
+        connect: {
+            assets: {
+                options: {
+                    base: path.resolve(__dirname, './test/runner/')
+                }
+            }
+        },
+        copy: {
+            mocha: {
+                files: [
+                    {
+                        src: path.resolve(__dirname, './node_modules/grunt-mocha/node_modules/mocha/mocha.js'),
+                        dest: path.resolve(__dirname, './test/runner/mocha.js')
+                    },
+                    {
+                        src: path.resolve(__dirname, './node_modules/grunt-mocha/node_modules/mocha/mocha.css'),
+                        dest: path.resolve(__dirname, './test/runner/mocha.css')
+                    }
+                ]
             }
         },
         jshint: {
@@ -50,9 +75,9 @@ module.exports = function (grunt) {
                 options: {
                     run: true,
                     reporter: 'Spec',
-                    log: true
-                },
-                src: './test/runner/index.html'
+                    log: true,
+                    urls: ['http://127.0.0.1:8000/']
+                }
             }
         },
         uglify: {
@@ -83,7 +108,16 @@ module.exports = function (grunt) {
     grunt.registerTask('test', [
         'jshint:all',
         'browserify:test',
+        'copy:mocha',
+        'connect:assets',
         'mocha:test'
+    ])
+
+    grunt.registerTask('test:dev', [
+        'jshint:all',
+        'browserify:test',
+        'copy:mocha',
+        'connect:assets:keepalive'
     ])
 
     grunt.registerTask('dist', [

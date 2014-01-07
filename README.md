@@ -95,10 +95,10 @@ $ npm run example-server
 
 ## Tests
 
-Open `./test/runner/index.html` in the browser or run in PhantomJS using:
+Run and open test server at [http://127.0.0.1:8000](http://127.0.0.1:8000):
 
 ```
-$ grunt test
+$ grunt test:dev
 ```
 
 ## Builds

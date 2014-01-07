@@ -1,7 +1,46 @@
 var neue = require('../')
 var should = require('should')
 
-describe('parse', function(){
+var FONT_RESOURCE = 'http://127.0.0.1:8000/fonts.css'
+
+describe('neue.load()', function(){
+
+    // skip load tests--PhantomJS doesn't recognize `onload` event for link tags
+    if (navigator.userAgent.indexOf('PhantomJS')) return
+
+    it('should err if css does not exist', function(done){
+        this.timeout(20e3)
+        neue.load([
+            { families: ['Source Sans Pro:n4'], css: FONT_RESOURCE + 'foo' }
+        ], function(err){
+            err.should.be.an.instanceOf(Error)
+            return done()
+        })
+    })
+
+    it('should throw a timeout err if family is incorrect', function(done){
+        this.timeout(20e3)
+        neue.load([
+            { families: ['Source Sans Poo:n4'], css: FONT_RESOURCE }
+        ], function(err){
+            err.should.be.an.instanceOf(Error)
+            return done()
+        })
+    })
+
+    it('should load fonts', function(done){
+        this.timeout(20e3)
+        neue.load([
+            { families: ['Source Sans Pro:n4'], css: FONT_RESOURCE }
+        ], function(err){
+            if (err) throw err
+            return done()
+        })
+    })
+
+})
+
+describe('neue.parse()', function(){
 
     it('should parse family', function(){
         neue.parse('Source Sans Pro').should.eql({
@@ -33,7 +72,7 @@ describe('parse', function(){
 
 })
 
-describe('stringify', function(){
+describe('neue.stringify()', function(){
 
     it('should stringify family', function(){
         neue.stringify('Source Sans Pro').should.eql([
