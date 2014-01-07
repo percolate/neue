@@ -3,6 +3,40 @@ var should = require('should')
 
 var FONT_RESOURCE = 'http://127.0.0.1:8000/fonts.css'
 
+describe('neue.load()', function(){
+
+    it('should err if css does not exist', function(done){
+        this.timeout(20e3)
+        neue.load([
+            { families: ['Source Sans Pro:n4'], css: FONT_RESOURCE + 'foo' }
+        ], function(err){
+            err.should.be.an.instanceOf(Error)
+            return done()
+        })
+    })
+
+    it('should throw a timeout err if family is incorrect', function(done){
+        this.timeout(20e3)
+        neue.load([
+            { families: ['Source Sans Poo:n4'], css: FONT_RESOURCE }
+        ], function(err){
+            err.should.be.an.instanceOf(Error)
+            return done()
+        })
+    })
+
+    it('should load fonts', function(done){
+        this.timeout(20e3)
+        neue.load([
+            { families: ['Source Sans Pro:n4'], css: FONT_RESOURCE }
+        ], function(err){
+            if (err) throw err
+            return done()
+        })
+    })
+
+})
+
 describe('neue.parse()', function(){
 
     it('should parse family', function(){
@@ -74,38 +108,3 @@ describe('neue.stringify()', function(){
     })
 
 })
-
-describe('neue.load()', function(){
-
-    it('should err if css does not exist', function(done){
-        this.timeout(10e3)
-        neue.load([
-            { families: ['Source Sans Pro:n4'], css: FONT_RESOURCE + 'foo' }
-        ], function(err){
-            err.should.be.an.instanceOf(Error)
-            return done()
-        })
-    })
-
-    it('should throw a timeout err if family is incorrect', function(done){
-        this.timeout(10e3)
-        neue.load([
-            { families: ['Source Sans Poo:n4'], css: FONT_RESOURCE }
-        ], function(err){
-            err.should.be.an.instanceOf(Error)
-            return done()
-        })
-    })
-
-    it('should load fonts', function(done){
-        this.timeout(10e3)
-        neue.load([
-            { families: ['Source Sans Pro:n4'], css: FONT_RESOURCE }
-        ], function(err){
-            if (err) throw err
-            return done()
-        })
-    })
-
-})
-
