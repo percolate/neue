@@ -15,6 +15,7 @@
   "bugs": {
     "url": "https://github.com/percolate/neue/issues"
   },
+  "license": "MIT",
   "main": "./lib/index.js",
   "scripts": {
     "test": "grunt test",
