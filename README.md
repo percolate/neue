@@ -1,6 +1,6 @@
 # neue
 
-![Build Status](https://circleci.com/gh/percolate/neue.png?circle-token=6bbc1bb47f0b1add61020aa5c48b878e5fef201e)
+[![Build Status](https://circleci.com/gh/percolate/neue.png?circle-token=6bbc1bb47f0b1add61020aa5c48b878e5fef201e)](https://circleci.com/gh/percolate/neue)
 
 ## A minimal web font loader
 
