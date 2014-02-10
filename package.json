@@ -1,22 +1,30 @@
 {
-  "private": true,
   "name": "neue",
   "version": "0.1.3",
   "description": "A minimal web font loader",
+  "keywords": [
+    "web",
+    "font",
+    "loader"
+  ],
+  "homepage": "https://percolate.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/percolate/neue"
+  },
+  "bugs": {
+    "url": "https://github.com/percolate/neue/issues"
+  },
+  "license": "MIT",
   "main": "./lib/index.js",
   "scripts": {
     "test": "grunt test",
     "example-server": "./node_modules/.bin/node-dev ./example/server"
   },
-  "readmeFilename": "README.md",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/percolate/neue"
-  },
   "dependencies": {
     "async": "~0.2.9",
-    "fvd": "git+ssh://git@github.com:percolate/fvd.git",
-    "own": "0.0.5"
+    "fvd": "~0.0.1",
+    "own": "~0.0.5"
   },
   "devDependencies": {
     "browserify-middleware": "~1.17.2",

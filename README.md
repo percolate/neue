@@ -1,17 +1,17 @@
 # neue
 
-[![Build Status](https://circleci.com/gh/percolate/neue.png?circle-token=6bbc1bb47f0b1add61020aa5c48b878e5fef201e)](https://circleci.com/gh/percolate/neue)
+![Build Status](https://circleci.com/gh/percolate/neue.png?circle-token=6bbc1bb47f0b1add61020aa5c48b878e5fef201e)
 
 ## A minimal web font loader
 
-Load linked fonts with `@font-face`.
+Async loading of linked fonts with `@font-face`.
 
 ## Installation
 
 Install with npm:
 
 ```
-$ npm install git+ssh://git@github.com:percolate/neue.git
+$ npm install neue
 ```
 
 ## Downloads
@@ -23,7 +23,6 @@ $ npm install git+ssh://git@github.com:percolate/neue.git
 
 Load font families using [FVD-style](https://github.com/percolate/fvd) declarations:
 
-
 ```js
 neue.load([
     { families: ['Source Sans Pro:n2,n3,n4,n6,n7,n9'], css: '//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' }
@@ -32,7 +31,7 @@ neue.load([
 })
 ```
 
-Where the CSS file looks something like this:
+Where the CSS file looks like this:
 
 ```css
 @font-face {
@@ -97,7 +96,7 @@ $ npm run example-server
 
 ## Tests
 
-Run and open test server at [http://127.0.0.1:8000](http://127.0.0.1:8000):
+Run the test server at [http://127.0.0.1:8000](http://127.0.0.1:8000):
 
 ```
 $ grunt test:dev
@@ -110,3 +109,7 @@ Create standalone `dist/neue.js` and `dist/neue.min.js` builds:
 ```
 $ grunt dist
 ```
+
+## License
+
+MIT License, see [LICENSE](https://github.com/percolate/neue/blob/master/LICENSE.md) for details.
