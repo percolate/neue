@@ -1,6 +1,9 @@
 {
   "name": "neue",
   "version": "0.1.3",
+  "engines": {
+    "node": "0.10.x"
+  },
   "description": "A minimal web font loader",
   "keywords": [
     "web",
@@ -22,9 +25,9 @@
     "example-server": "./node_modules/.bin/node-dev ./example/server"
   },
   "dependencies": {
-    "async": "~0.2.9",
-    "fvd": "~0.0.1",
-    "own": "~0.0.5"
+    "async": "^0.9.0",
+    "fvd": "^1.0.0",
+    "own": "^1.0.0"
   },
   "devDependencies": {
     "browserify-middleware": "~1.17.2",
