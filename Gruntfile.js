@@ -40,11 +40,11 @@ module.exports = function (grunt) {
             mocha: {
                 files: [
                     {
-                        src: path.resolve(__dirname, './node_modules/grunt-mocha/node_modules/mocha/mocha.js'),
+                        src: path.resolve(__dirname, './node_modules/mocha/mocha.js'),
                         dest: path.resolve(__dirname, './test/runner/mocha.js')
                     },
                     {
-                        src: path.resolve(__dirname, './node_modules/grunt-mocha/node_modules/mocha/mocha.css'),
+                        src: path.resolve(__dirname, './node_modules/mocha/mocha.css'),
                         dest: path.resolve(__dirname, './test/runner/mocha.css')
                     }
                 ]
@@ -73,6 +73,7 @@ module.exports = function (grunt) {
         mocha: {
             test: {
                 options: {
+                    growlOnSuccess: false,
                     run: true,
                     reporter: 'Spec',
                     log: true,
